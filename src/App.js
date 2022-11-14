@@ -33,12 +33,12 @@ const App = () => {
   return (
     <div>
       <Checkbox
-        label="Köp"
+        label={Mode.Buy}
         value={mode === Mode.Buy}
         onChange={setBuy}
       />
       <Checkbox
-        label="Sälj"
+        label={Mode.Sell}
         value={mode === Mode.Sell}
         onChange={setSell}
       />
@@ -51,14 +51,14 @@ const App = () => {
       />
       <p></p>
       <TextField
-        label={"Totalt Pris"}
+        label={"Price (total)"}
         value={price}
         onChange={handlePriceChange}
         type={"number"}
       />
       <p></p>
       <TextField
-        label={"Antal"}
+        label={"# of shares"}
         value={amount}
         onChange={handleAmountChange}
         type={"number"}
